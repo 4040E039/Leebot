@@ -35,7 +35,7 @@ bot.on('message', async (event) => {
   try {
     if (msg === '!匯率'){
       const data = await rp({ uri: 'https://4040e039.github.io/WorkPage2/result.json', json: true })
-      msgdata = data.Bankcashbuy[0]
+      msgdata = data.Bankcashbuy
       event.reply(msgdata)
     }
     else if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
