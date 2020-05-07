@@ -34,8 +34,8 @@ bot.on('message', async (event) => {
   let msgdata = '';
   try {
     if (msg === '!匯率'){
-      const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
-      msgdata = data.entry[0].title
+      const data = await rp({ uri: 'result.json', json: true })
+      msgdata = data.Bankcashbuy[0]
       event.reply(msgdata)
     }
     else if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
