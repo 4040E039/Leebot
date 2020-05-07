@@ -33,15 +33,15 @@ bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
   const data = await rp({ uri: 'https://4040e039.github.io/Leebot/result.json', json: true })
-  // let Arr = ['美金' ,'港幣' ,'英鎊' ,'加拿大幣' ,'澳幣' ,'法郎' ,'日圓' ,'南非幣' ,'瑞典幣' ,'紐元' ,'泰幣' ,'菲國比索' , '印尼幣' ,'歐元' ,'韓元' ,'越南盾' ,'馬來幣' ,'人民幣']
+  let Arr = ['美金' ,'港幣' ,'英鎊' ,'加拿大幣' ,'澳幣' ,'法郎' ,'日圓' ,'南非幣' ,'瑞典幣' ,'紐元' ,'泰幣' ,'菲國比索' , '印尼幣' ,'歐元' ,'韓元' ,'越南盾' ,'馬來幣' ,'人民幣']
   try {
-    // if (msg === '!匯率'){
-    //   for (let i = 0; i<Arr.length;i++){
-    //   msgdata += data[i].Bankcashbuy + '\n'
-    //   event.reply(Arr[i] +msgdata)
-    //  }
-    // }
-   if (msg === '!美金'){
+    if (msg === '!匯率'){
+      for (let i = 0; i<Arr.length;i++){
+       msgdata += data[i].Bankcashbuy + '\n'
+      event.reply(msgdata)
+      }
+     }
+    else if (msg === '!美金' || msg === '!美元' || msg === '!美圓'){
       msgdata = data[0].Bankcashbuy
       event.reply('美金: '+msgdata)
     }
@@ -61,7 +61,7 @@ bot.on('message', async (event) => {
       msgdata = data[5].Bankcashbuy
       event.reply('澳幣: '+msgdata)
     }
-    else if (msg === '!法郎'){
+    else if (msg === '!法郎' || msg === '!瑞士法郎'){
       msgdata = data[6].Bankcashbuy
       event.reply('法郎: '+msgdata)
     }
@@ -120,7 +120,7 @@ bot.on('message', async (event) => {
       event.reply('我也愛你')
     }
     else {
-      event.reply('請輸入 !美元')
+      event.reply('請輸入 !美金或其他!貨幣')
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
