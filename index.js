@@ -28,24 +28,9 @@ bot.on('leave', async (event) => {
     msg = '發生錯誤'
   }
 })
+
 let messageData = () => {
-
   let msg = event.message.text;
-
-  switch (msg){
-    case '你好' || 'Hello' || 'Hi' :
-      event.reply(msg)
-      break;
-    case '愛你' || '我愛你':
-      event.reply(msg)
-      break;
-    default:
-      event.reply('沒有相對應文字')
-
-  }
-
- 
-  /* 
   if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
     event.reply(msg)
   }
@@ -53,7 +38,7 @@ let messageData = () => {
     event.reply('我也愛你')
   }else{
     event.reply('沒有相對應文字')
-  } */
+  }
 }
 bot.on('message', async (event) => {
   try {
