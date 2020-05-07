@@ -51,8 +51,12 @@ bot.on('message', async (event) => {
       event.reply('加拿大幣: '+msgdata)
     }
     else if ('!澳幣 '){
-      msgdata = data[3].Bankcashbuy
+      msgdata = data[5].Bankcashbuy
       event.reply('澳幣: '+msgdata)
+    }
+    else if ('!瑞士法郎  '){
+      msgdata = data[6].Bankcashbuy
+      event.reply('瑞士法郎: '+msgdata)
     }
     else if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
       event.reply(msg)
