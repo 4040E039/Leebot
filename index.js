@@ -41,125 +41,105 @@ bot.on('message', async (event) => {
        msgdata += Arr[i] + '\n'
       }
       nmsg = msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!美金' || msg === '!美元' || msg === '!美圓'){
       msgdata = data[0].Bankcashbuy
       nmsg = '美金: '+msgdata
-      event.reply(nmsg)
+      
     }
     else if (msg === '!港幣'){
       msgdata = data[1].Bankcashbuy
       nmsg = '港幣: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!英鎊'){
       msgdata = data[2].Bankcashbuy
       nmsg = '英鎊: '+msgdata
-      event.reply(nmsg)
      }
     else if (msg === '!澳幣'){
       msgdata = data[3].Bankcashbuy
       nmsg = '澳幣: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!加拿大幣'){
       msgdata = data[4].Bankcashbuy
       nmsg = '加拿大幣: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!新加坡幣'){
       msgdata = data[5].Bankcashbuy
       nmsg = '新加坡幣:'+msgdata
-      event.reply(nmsg)
      }
     else if (msg === '!法郎' || msg === '!瑞士法郎'){
       msgdata = data[6].Bankcashbuy
       nmsg = '法郎: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!日圓'){
       msgdata = data[7].Bankcashbuy
       nmsg = '日圓: '+msgdata
-      event.reply(nmsg)
    }
     else if (msg === '!南非幣'){
       msgdata = data[8].Bankcashbuy
       nmsg = '南非幣: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!瑞典幣'){
       msgdata = data[9].Bankcashbuy
       nmsg = '瑞典幣: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!紐元'){
       msgdata = data[10].Bankcashbuy
       nmsg = '紐元: '+msgdata
-      event.reply(nmsg)
   }
     else if (msg === '!泰幣'){
       msgdata = data[11].Bankcashbuy
       nmsg = '泰幣: '+msgdata
-      event.reply(nmsg)
   }
     else if (msg === '!菲國比索'){
       msgdata = data[12].Bankcashbuy
       nmsg = '菲國比索: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!印尼幣'){
       msgdata = data[13].Bankcashbuy
       nmsg = '印尼幣: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!歐元'){
       msgdata = data[14].Bankcashbuy
       nmsg = '歐元: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!韓元'){
       msgdata = data[15].Bankcashbuy
       nmsg = '韓元: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!越南盾'){
       msgdata = data[16].Bankcashbuy
       nmsg = '越南盾: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!馬來幣'){
       msgdata = data[17].Bankcashbuy
       nmsg = '馬來幣: '+msgdata
-      event.reply(nmsg)
     }
     else if (msg === '!人民幣'){
       msgdata = data[18].Bankcashbuy
       nmsg = '人民幣: '+msgdata
-      event.reply(nmsg)
    }
-    else if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
-      nmsg += msg
+    else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi'){
+      nmsg = msg
     }
-    else if (msg === '愛你' || msg === '我愛你'){
-      nmsg += '我也愛你'
+    else if (msg === '!愛你' || msg === '!我愛你'){
+      nmsg = '我也愛你'
     }
-    else if (msg === '單身'){
+    else if (msg === '!哭哭'){
       nmsg = {
       type: 'sticker',
-      packageId: '1',
-      stickerId: '1'
+      packageId: '11537',
+      stickerId: '52002750 '
       }
       event.reply(nmsg)
-      event.reply('目前單身中>_<')
-   
-    }
+
+  }
     else {
       nmsg = '請輸入 !美金或其他 !貨幣'
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
-    
+    event.reply(nmsg)
   } catch (error) {
     msg = '發生錯誤'
   }
