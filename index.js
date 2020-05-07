@@ -17,8 +17,9 @@ bot.on('message', async (event) => {
   try {
     if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
       event.reply(msg)
-    }else{
-      event.reply('null')
+    }
+    if (msg === '愛你' || msg === '我愛你'){
+      event.reply('我也愛你')
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
