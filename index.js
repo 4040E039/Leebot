@@ -139,16 +139,16 @@ bot.on('message', async (event) => {
       event.reply(nmsg)
    }
     else if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
-      nmsg = msg
+      nmsg += msg
     }
     else if (msg === '愛你' || msg === '我愛你'){
-      nmsg = '我也愛你'
+      nmsg += '我也愛你'
     }
     else if (msg === '單身'){
       nmsg = {
       type: 'sticker',
-      packageId: '2',
-      stickerId: '2'
+      packageId: '1',
+      stickerId: '1'
       }
       event.reply(nmsg)
       event.reply('目前單身中>_<')
