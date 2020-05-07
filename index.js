@@ -33,8 +33,8 @@ bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
   try {
-    const data = await rp({ uri: 'https://4040e039.github.io/Leebot/result.json', json: true })
     if (msg === '!美金'){
+      const data = await rp({ uri: 'https://4040e039.github.io/Leebot/result.json', json: true })
       msgdata = data[0].Bankcashbuy
       event.reply(msgdata)
     }
