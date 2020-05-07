@@ -31,8 +31,14 @@ bot.on('leave', async (event) => {
 
 bot.on('message', async (event) => {
   let msg = event.message.text;
+  let msgdata = '';
   try {
-    if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
+    if (msg === '!匯率'){
+      const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
+      msgdata = data.entry[0].title
+      event.reply(msgdata)
+    }
+    else if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
       event.reply(msg)
     }
     else if (msg === '愛你' || msg === '我愛你'){
