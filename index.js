@@ -29,20 +29,18 @@ bot.on('leave', async (event) => {
   }
 })
 
-let messageData = () => {
-  let msg = event.message.text;
-  if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
-    event.reply(msg)
-  }
-  else if (msg === '愛你' || msg === '我愛你'){
-    event.reply('我也愛你')
-  }else{
-    event.reply('沒有相對應文字')
-  }
-}
+
 bot.on('message', async (event) => {
   try {
-    messageData();
+    let msg = event.message.text;
+    if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
+      event.reply(msg)
+    }
+    else if (msg === '愛你' || msg === '我愛你'){
+      event.reply('我也愛你')
+    }else{
+      event.reply('沒有相對應文字')
+    }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
   } catch (error) {
