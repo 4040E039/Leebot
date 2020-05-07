@@ -1,7 +1,6 @@
-const request = require("request");
-const cheerio = require("cheerio");
-const fs = require("fs");
-
+import request from 'request'
+import cheerio from 'cheerio'
+import fs from 'fs'
 const earthquake = function () {
   request({
     url: "https://rate.bot.com.tw/xrt?Lang=zh-TW", // 中央氣象局網頁
