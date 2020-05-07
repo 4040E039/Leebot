@@ -13,14 +13,19 @@ const bot = linebot({
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 })
 bot.on('message', async (event) => {
-  let msg = ''
+  let msg = event.message.text;
   try {
-    const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
-    msg = data.entry[0].title
+    if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
+      event.reply(msg)
+    }else{
+      event.reply('null')
+    }
+    // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
+    // msg = data.entry[0].title
   } catch (error) {
     msg = '發生錯誤'
   }
-  event.reply(msg)
+  // event.reply(msg)
 })
 
 // 在 port 啟動
