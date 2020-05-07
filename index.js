@@ -38,7 +38,7 @@ bot.on('message', async (event) => {
     if (msg === '!匯率'){
       for (let i = 0; i<Arr.length;i++){
       msgdata = data[i].Bankcashbuy
-      event.reply('Arr[i]: '+msgdata)
+      event.reply(Arr[i] +msgdata)
      }
     }
     else if (msg === '!美金'){
