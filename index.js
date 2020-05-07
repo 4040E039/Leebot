@@ -37,7 +37,7 @@ bot.on('message', async (event) => {
   try {
     if (msg === '!匯率'){
       for (let i = 0; i<Arr.length;i++){
-      msgdata = data[i].Bankcashbuy
+      msgdata += data[i].Bankcashbuy + '\n'
       event.reply(Arr[i] +msgdata)
      }
     }
@@ -118,6 +118,9 @@ bot.on('message', async (event) => {
     }
     else if (msg === '愛你' || msg === '我愛你'){
       event.reply('我也愛你')
+    }
+    else {
+      event.reply('請輸入 !美元')
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
