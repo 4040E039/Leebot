@@ -110,6 +110,18 @@ bot.on('message', async (event) => {
       nmsg = msg
     } else if (msg === '!愛你' || msg === '!我愛你') {
       nmsg = '我也愛你'
+    } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
+      nmsg = {
+        type: 'sticker',
+        packageId: '11537',
+        stickerId: '52002772'
+      }
+    } else if (msg === '!單身' || msg === '!單身中') {
+      nmsg = {
+        type: 'sticker',
+        packageId: '11539',
+        stickerId: '52114141'
+      }
     } else if (msg === '!哭哭') {
       nmsg = {
         type: 'sticker',
@@ -134,22 +146,19 @@ bot.on('message', async (event) => {
         packageId: '2',
         stickerId: '517'
       }
-    } 
-    else if (msg === '!生氣') {
+    } else if (msg === '!生氣') {
       nmsg = {
         type: 'sticker',
         packageId: '11538',
         stickerId: '51626518'
       }
-    } 
-    else if (msg === '!單身') {
+    } else if (msg === '!單身') {
       nmsg = {
         type: 'sticker',
         packageId: '11538',
         stickerId: '51626529'
       }
-    } 
-    else {
+    } else {
       nmsg = '請輸入 !美金或其他 !貨幣'
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
