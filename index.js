@@ -35,9 +35,24 @@ bot.on('message', async (event) => {
   const data = await rp({ uri: 'https://4040e039.github.io/Leebot/result.json', json: true })
   try {
     if (msg === '!美金'){
-      
       msgdata = data[0].Bankcashbuy
-      event.reply(msgdata)
+      event.reply('美金: '+msgdata)
+    }
+    else if ('!港幣'){
+      msgdata = data[1].Bankcashbuy
+      event.reply('港幣: '+msgdata)
+    }
+    else if ('!英鎊'){
+      msgdata = data[2].Bankcashbuy
+      event.reply('英鎊: '+msgdata)
+    }
+    else if ('!加拿大幣 '){
+      msgdata = data[4].Bankcashbuy
+      event.reply('加拿大幣: '+msgdata)
+    }
+    else if ('!澳幣 '){
+      msgdata = data[3].Bankcashbuy
+      event.reply('澳幣: '+msgdata)
     }
     else if (msg === '你好' || msg === 'Hello' || msg === 'Hi'){
       event.reply(msg)
