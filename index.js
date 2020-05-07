@@ -135,7 +135,7 @@ bot.on('message', async (event) => {
    
     }
     else {
-      event.reply('請輸入 !美金或其他 !貨幣')
+      nmsg = '請輸入 !美金或其他 !貨幣'
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
