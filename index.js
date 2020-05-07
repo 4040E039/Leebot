@@ -116,7 +116,7 @@ bot.on('message', async (event) => {
         packageId: '11537',
         stickerId: '52002772'
       }
-    } else if (msg === '!單身' || msg === '!單身中') {
+    } else if (msg === '!單身' || msg === '!單身中' || msg === '!男友' || msg === '!前男友') {
       nmsg = {
         type: 'sticker',
         packageId: '11539',
@@ -159,7 +159,7 @@ bot.on('message', async (event) => {
         stickerId: '51626529'
       }
     } else {
-      nmsg = '請輸入 !美金或其他 !貨幣'
+      nmsg = '請輸入 !美金或其他 !匯率 或!加上隨便打'
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
