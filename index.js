@@ -36,7 +36,7 @@ bot.on('message', async (event) => {
   let Arr = ['美金' ,'港幣' ,'英鎊' ,'加拿大幣' ,'澳幣' ,'法郎' ,'日圓' ,'南非幣' ,'瑞典幣' ,'紐元' ,'泰幣' ,'菲國比索' , '印尼幣' ,'歐元' ,'韓元' ,'越南盾' ,'馬來幣' ,'人民幣']
   try {
     if (msg === '!匯率'){
-      if(i = 0, i<Arr.length,i++){
+      for (let i = 0; i<Arr.length;i++){
       msgdata = data[i].Bankcashbuy
       event.reply('Arr[i]: '+msgdata)
      }
