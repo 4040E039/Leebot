@@ -38,10 +38,11 @@ bot.on('message', async (event) => {
     if (msg === '!匯率'){
       for (let i = 0; i<Arr.length;i++){
        msgdata += data[i].Bankcashbuy + '\n'
-      }
-      for (let i = 0; i<Arr.length;i++){
+       for (let i = 0; i<Arr.length;i++){
         event.reply( Arr[i] + msgdata)
       }
+      }
+
    }
     else if (msg === '!美金' || msg === '!美元' || msg === '!美圓'){
       msgdata = data[0].Bankcashbuy
