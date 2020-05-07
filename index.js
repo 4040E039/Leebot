@@ -131,6 +131,7 @@ bot.on('message', async (event) => {
       packageId: '1',
       stickerId: '1'
       }
+      event.reply(nmsg)
       event.reply('目前單身中>_<')
    
     }
