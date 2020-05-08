@@ -63,7 +63,8 @@ bot.on('message', async (event) => {
       }
       nmsg = msgdata
     } else if (msg === '!美金') {
-      msgdata = data[0].Bankcashbuy
+   
+    
       nmsg = Arr2[0]
     } 
     else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi') {
