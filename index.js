@@ -55,7 +55,7 @@ bot.on('message', async (event) => {
 
   let Arr3 = []
   for(let i = 0 ;i<19;i++){
-    Arr3[i] = Arr[i] + Arr2[i]
+    Arr3 += Arr[i] + Arr2[i]
   }
   
 
