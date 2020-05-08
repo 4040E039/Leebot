@@ -29,11 +29,9 @@ bot.on('join', async (event) => {
 })
 bot.on('leave', async (event) => {
   try {
-    nmsg ='我滾啦'
+    nmsg = '我滾啦'
     event.reply(nmsg)
-  }
-  
-   catch (error) {
+  } catch (error) {
     msg = '發生錯誤'
   }
 })
@@ -47,17 +45,17 @@ bot.on('message', async (event) => {
     json: true
   })
   let Arr3 = [];
-  for(let i = 0 ;i < 19;i++){
+  for (let i = 0; i < 19; i++) {
     Arr3.push(data[i].Bankcashbuy)
   }
 
-  let Arr2 = ['美金: ' , '港幣: ' , '英鎊: ' , '澳幣: ' , '加拿大幣: ' , '新加坡幣: ' , '法郎: ' , '日圓: ' , '南非幣: ' , '瑞典幣: ' , '紐元: ' , '泰幣: ' , '菲國比索: ' , '印尼幣: ' , '歐元: ' , '韓元: ' , '越南盾: ' , '馬來幣: ' , '人民幣: ' ]
+  let Arr2 = ['美金: ', '港幣: ', '英鎊: ', '澳幣: ', '加拿大幣: ', '新加坡幣: ', '法郎: ', '日圓: ', '南非幣: ', '瑞典幣: ', '紐元: ', '泰幣: ', '菲國比索: ', '印尼幣: ', '歐元: ', '韓元: ', '越南盾: ', '馬來幣: ', '人民幣: ']
 
   let Arr = []
-  for(let i = 0 ;i<Arr2.length;i++){
+  for (let i = 0; i < Arr2.length; i++) {
     Arr[i] = Arr2[i] + Arr3[i]
   }
-  
+
 
   try {
     if (msg === '!你有啥用' || msg === '!簡介' || msg === '!功能' || msg === '!指令') {
@@ -110,12 +108,12 @@ bot.on('message', async (event) => {
     } else if (msg === '!愛你' || msg === '!我愛你') {
       nmsg = '我也愛你'
     } else if (msg === '!鮮自然') {
-        nmsg = [{
-          type: 'location',
-          title: '鮮自然 (歸仁中山門市)',
-          address: '711台南市歸仁區中山路一段466號',
-          latitude: 22.966542,
-          longitude: 120.297670
+      nmsg = [{
+        type: 'location',
+        title: '鮮自然 (歸仁中山門市)',
+        address: '711台南市歸仁區中山路一段466號',
+        latitude: 22.966542,
+        longitude: 120.297670
       }, {
         type: 'text',
         text: '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
@@ -127,11 +125,11 @@ bot.on('message', async (event) => {
         address: '71142台南市歸仁區中山路一段464號',
         latitude: 22.966466,
         longitude: 120.297862
-    }, {
-      type: 'text',
-      text: '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
-    }]
-    
+      }, {
+        type: 'text',
+        text: '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
+      }]
+
     } else if (msg === '!林廷璋') {
       nmsg = [{
         type: 'location',
@@ -139,11 +137,11 @@ bot.on('message', async (event) => {
         address: '711台南市歸仁區民權三街98號',
         latitude: 22.969431,
         longitude: 120.290273
-    }, {
-      type: 'text',
-      text: '林廷璋耳鼻喉科診所' + '\n' + ' 062309919'
-    }]
-     
+      }, {
+        type: 'text',
+        text: '林廷璋耳鼻喉科診所' + '\n' + ' 062309919'
+      }]
+
     } else if (msg === '!尚介讚') {
       nmsg = [{
         type: 'location',
@@ -151,11 +149,11 @@ bot.on('message', async (event) => {
         address: '711台南市歸仁區民族北街1號',
         latitude: 22.967261,
         longitude: 120.292246
-    }, {
-      type: 'text',
-      text: '尚介讚香鷄排' + '\n' + ' 062399882'
-    }]
-    
+      }, {
+        type: 'text',
+        text: '尚介讚香鷄排' + '\n' + ' 062399882'
+      }]
+
     } else if (msg === '!米里') {
       nmsg = [{
         type: 'location',
@@ -163,11 +161,11 @@ bot.on('message', async (event) => {
         address: '711台南市歸仁區中正南路一段89號',
         latitude: 22.964456,
         longitude: 120.293528
-    }, {
-      type: 'text',
-      text: '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
-    }]
-     
+      }, {
+        type: 'text',
+        text: '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
+      }]
+
     } else if (msg === '!鮮茶道') {
       nmsg = [{
         type: 'location',
@@ -175,17 +173,19 @@ bot.on('message', async (event) => {
         address: '711台南市歸仁區中山路二段1號',
         latitude: 22.966612,
         longitude: 120.293827
-    }, {
-      type: 'text',
-      text: '鮮茶道 (歸仁圓環店)' + '\n' + ' 063387933'
-    }]
-     
+      }, {
+        type: 'text',
+        text: '鮮茶道 (歸仁圓環店)' + '\n' + ' 063387933'
+      }]
+
     } else if (msg === '!胖老爹') {
       nmsg = '胖老爹美式炸雞(台南歸仁店)' + '\n' + ' 062305279'
     } else if (msg === '!三姐妹') {
       nmsg = '三姐妹海苔飯捲複合式餐飲' + '\n' + ' 063300168'
     } else if (msg === '!佳美') {
       nmsg = '佳美味-蔥爆豬肉飯' + '\n' + ' 063306970'
+    } else if (msg === '!天吉屋') {
+      nmsg = '天吉屋' + '\n' + ' 062396044'
     } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
         type: 'sticker',
