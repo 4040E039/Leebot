@@ -39,6 +39,7 @@ bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
   let nmsg = '';
+  let locationData = '';
   const data = await rp({
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
@@ -116,14 +117,14 @@ bot.on('message', async (event) => {
       nmsg = '我也愛你'
     } 
     else if (msg === '!鮮自然') {
-      msgdata = {
+      locationData = {
         type: 'location',
         title: '鮮自然 (歸仁中山門市)',
         address: '711台南市歸仁區中山路一段466號',
-        latitude: 22.967422,
-        longitude: 120.297990
+        latitude: 120.297990,
+        longitude: 22.967422
       }
-      nmsg = '062396777'+ '\n' + msgdata
+      nmsg = locationData
     }
     else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
