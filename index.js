@@ -37,22 +37,8 @@ bot.on('leave', async (event) => {
     msg = '發生錯誤'
   }
 })
-function test(nmsg){
-  nmsg = [{
-    type: 'location',
-    title: '尚介讚香鷄排',
-    address: '711台南市歸仁區民族北街1號',
-    latitude: 22.971257,
-    longitude: 120.255953
-}, {
-  type: 'text',
-  text: '尚介讚香鷄排' + '\n' + ' 062399882'
-}]
-}
 
-
-bot.on('message', async (event,nmsg) => {
-
+bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
   let nmsg = '';
@@ -166,12 +152,41 @@ bot.on('message', async (event,nmsg) => {
     }]
      
     } else if (msg === '!尚介讚') {
-      test(nmsg)
+      nmsg = [{
+        type: 'location',
+        title: '尚介讚香鷄排',
+        address: '711台南市歸仁區民族北街1號',
+        latitude: 22.971257,
+        longitude: 120.255953
+    }, {
+      type: 'text',
+      text: '尚介讚香鷄排' + '\n' + ' 062399882'
+    }]
     
     } else if (msg === '!米里') {
-      nmsg = '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
+      nmsg = [{
+        type: 'location',
+        title: '米里米里(歸仁中正南店)',
+        address: '711台南市歸仁區中正南路一段89號',
+        latitude: 22.964456,
+        longitude: 120.293528
+    }, {
+      type: 'text',
+      text: '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
+    }]
+     
     } else if (msg === '!鮮茶道') {
-      nmsg = '鮮茶道 (歸仁圓環店)' + '\n' + ' 063387933'
+      nmsg = [{
+        type: 'location',
+        title: '鮮茶道 (歸仁圓環店)',
+        address: '711台南市歸仁區中山路二段1號',
+        latitude: 22.966612,
+        longitude: 120.293827
+    }, {
+      type: 'text',
+      text: '鮮茶道 (歸仁圓環店)' + '\n' + ' 063387933'
+    }]
+     
     } else if (msg === '!胖老爹') {
       nmsg = '胖老爹美式炸雞(台南歸仁店)' + '\n' + ' 062305279'
     } else if (msg === '!三姐妹') {
