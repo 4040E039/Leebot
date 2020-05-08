@@ -156,8 +156,8 @@ bot.on('message', async (event) => {
         type: 'location',
         title: '尚介讚香鷄排',
         address: '711台南市歸仁區民族北街1號',
-        latitude: 22.971257,
-        longitude: 120.255953
+        latitude: 22.967261,
+        longitude: 120.292246
     }, {
       type: 'text',
       text: '尚介讚香鷄排' + '\n' + ' 062399882'
