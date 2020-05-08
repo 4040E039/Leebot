@@ -62,7 +62,7 @@ bot.on('message', async (event) => {
       nmsg = '你可以輸入!匯率或!相對應貨幣'
     } else if (msg === '!匯率') {
       for (let i = 0; i < Arr.length; i++) {
-        msgdata += Arr[i] + '\n'
+        msgdata += Arr3[i] + '\n'
       }
       nmsg = msgdata
     } else if (msg === '!美金') {
