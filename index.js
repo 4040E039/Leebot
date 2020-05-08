@@ -121,8 +121,8 @@ bot.on('message', async (event) => {
         type: 'location',
         title: '鮮自然 (歸仁中山門市)',
         address: '711台南市歸仁區中山路一段466號',
-        latitude: 120.297990,
-        longitude: 22.967422
+        latitude: 22.967422,
+        longitude: 120.297990
       }
       nmsg = locationData
     }
