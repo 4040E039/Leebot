@@ -38,6 +38,19 @@ bot.on('leave', async (event) => {
   }
 })
 
+function test(nmsg){
+  nmsg = [{
+    type: 'location',
+    title: '尚介讚香鷄排',
+    address: '711台南市歸仁區民族北街1號',
+    latitude: 22.971257,
+    longitude: 120.255953
+}, {
+  type: 'text',
+  text: '尚介讚香鷄排' + '\n' + ' 062399882'
+}]
+}
+
 bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
@@ -152,16 +165,7 @@ bot.on('message', async (event) => {
     }]
      
     } else if (msg === '!尚介讚') {
-      nmsg = [{
-        type: 'location',
-        title: '尚介讚香鷄排',
-        address: '711台南市歸仁區民族北街1號',
-        latitude: 22.971257,
-        longitude: 120.255953
-    }, {
-      type: 'text',
-      text: '尚介讚香鷄排' + '\n' + ' 062399882'
-    }]
+      test(nmsg)
     
     } else if (msg === '!米里') {
       nmsg = '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
