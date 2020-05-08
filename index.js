@@ -50,24 +50,75 @@ bot.on('message', async (event) => {
   for(let j = 0; j<18;j++){
     Arr += Arr.push(data[i].Bankcashbuy)
   }
-  let Arr2 = ['美金: '+Arr[0],'港幣: '+Arr[1],'英鎊: '+Arr[2],'澳幣: '+Arr[3],'加拿大幣: '+Arr[4],'新加坡幣: '+Arr[5],'法郎: '+Arr[6],'日圓: '+Arr[7],'南非幣: '+Arr[8],'瑞典幣: '+Arr[9],'紐元: '+Arr[10],'泰幣: '+Arr[11],'菲國比索: '+Arr[12],'印尼幣: '+Arr[13],'歐元: '+Arr[14],'韓元: '+Arr[15],'越南盾: '+Arr[16],'馬來幣: '+Arr[17],'人民幣: '+Arr[18]]
- 
+  let Arr2 = ['美金: '+ Arr[0],'港幣: '+Arr[1],'英鎊: '+Arr[2],'澳幣: '+Arr[3],'加拿大幣: '+Arr[4],'新加坡幣: '+Arr[5],'法郎: '+Arr[6],'日圓: '+Arr[7],'南非幣: '+Arr[8],'瑞典幣: '+Arr[9],'紐元: '+Arr[10],'泰幣: '+Arr[11],'菲國比索: '+Arr[12],'印尼幣: '+Arr[13],'歐元: '+Arr[14],'韓元: '+Arr[15],'越南盾: '+Arr[16],'馬來幣: '+Arr[17],'人民幣: '+Arr[18]]
+
   // let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
- 
   try {
     if (msg === '!你有啥用' || msg === '!簡介' || msg === '!功能' || msg === '!指令') {
       nmsg = '你可以輸入!匯率或!相對應貨幣'
     } else if (msg === '!匯率') {
       for (let i = 0; i < Arr.length; i++) {
-        msgdata += Arr2[i] + '\n'
+        msgdata += Arr[i] + '\n'
       }
       nmsg = msgdata
-    } else if (msg === '!美金') {
-   
-    
+    } else if (msg === '!美金' || msg === '!美元' || msg === '!美圓') {
+      msgdata = data[0].Bankcashbuy
       nmsg = Arr2[0]
-    } 
-    else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi') {
+    } else if (msg === '!港幣') {
+      msgdata = data[1].Bankcashbuy
+      nmsg = '港幣: ' + msgdata
+    } else if (msg === '!英鎊') {
+      msgdata = data[2].Bankcashbuy
+      nmsg = '英鎊: ' + msgdata
+    } else if (msg === '!澳幣') {
+      msgdata = data[3].Bankcashbuy
+      nmsg = '澳幣: ' + msgdata
+    } else if (msg === '!加拿大幣') {
+      msgdata = data[4].Bankcashbuy
+      nmsg = '加拿大幣: ' + msgdata
+    } else if (msg === '!新加坡幣') {
+      msgdata = data[5].Bankcashbuy
+      nmsg = '新加坡幣:' + msgdata
+    } else if (msg === '!法郎' || msg === '!瑞士法郎') {
+      msgdata = data[6].Bankcashbuy
+      nmsg = '法郎: ' + msgdata
+    } else if (msg === '!日圓') {
+      msgdata = data[7].Bankcashbuy
+      nmsg = '日圓: ' + msgdata
+    } else if (msg === '!南非幣') {
+      msgdata = data[8].Bankcashbuy
+      nmsg = '南非幣: ' + msgdata
+    } else if (msg === '!瑞典幣') {
+      msgdata = data[9].Bankcashbuy
+      nmsg = '瑞典幣: ' + msgdata
+    } else if (msg === '!紐元') {
+      msgdata = data[10].Bankcashbuy
+      nmsg = '紐元: ' + msgdata
+    } else if (msg === '!泰幣') {
+      msgdata = data[11].Bankcashbuy
+      nmsg = '泰幣: ' + msgdata
+    } else if (msg === '!菲國比索') {
+      msgdata = data[12].Bankcashbuy
+      nmsg = '菲國比索: ' + msgdata
+    } else if (msg === '!印尼幣') {
+      msgdata = data[13].Bankcashbuy
+      nmsg = '印尼幣: ' + msgdata
+    } else if (msg === '!歐元') {
+      msgdata = data[14].Bankcashbuy
+      nmsg = '歐元: ' + msgdata
+    } else if (msg === '!韓元') {
+      msgdata = data[15].Bankcashbuy
+      nmsg = '韓元: ' + msgdata
+    } else if (msg === '!越南盾') {
+      msgdata = data[16].Bankcashbuy
+      nmsg = '越南盾: ' + msgdata
+    } else if (msg === '!馬來幣') {
+      msgdata = data[17].Bankcashbuy
+      nmsg = '馬來幣: ' + msgdata
+    } else if (msg === '!人民幣') {
+      msgdata = data[18].Bankcashbuy
+      nmsg = '人民幣: ' + msgdata
+    } else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi') {
       nmsg = msg
     } else if (msg === '!愛你' || msg === '!我愛你') {
       nmsg = '我也愛你'
