@@ -37,7 +37,7 @@ bot.on('leave', async (event) => {
     msg = '發生錯誤'
   }
 })
-function test(){
+function test(nmsg){
   nmsg = [{
     type: 'location',
     title: '尚介讚香鷄排',
@@ -51,7 +51,7 @@ function test(){
 }
 
 
-bot.on('message', async (event) => {
+bot.on('message', async (event,nmsg) => {
 
   let msg = event.message.text;
   let msgdata = '';
@@ -166,7 +166,7 @@ bot.on('message', async (event) => {
     }]
      
     } else if (msg === '!尚介讚') {
-      test()
+      test(nmsg)
     
     } else if (msg === '!米里') {
       nmsg = '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
