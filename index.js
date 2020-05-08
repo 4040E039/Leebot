@@ -121,18 +121,48 @@ bot.on('message', async (event) => {
           type: 'location',
           title: '鮮自然 (歸仁中山門市)',
           address: '711台南市歸仁區中山路一段466號',
-          latitude: 22.967984,
-          longitude: 120.297512
+          latitude: 22.966542,
+          longitude: 120.297670
       }, {
         type: 'text',
         text: '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
       }]
     } else if (msg === '!迷客夏') {
-      nmsg = '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
+      nmsg = [{
+        type: 'location',
+        title: '迷客夏 (臺南歸仁店)',
+        address: '71142台南市歸仁區中山路一段464號',
+        latitude: 22.966466,
+        longitude: 120.297862
+    }, {
+      type: 'text',
+      text: '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
+    }]
+    
     } else if (msg === '!林廷璋') {
-      nmsg = '林廷璋耳鼻喉科診所' + '\n' + ' 062309919'
+      nmsg = [{
+        type: 'location',
+        title: '林廷璋耳鼻喉科診所',
+        address: '711台南市歸仁區民權三街98號',
+        latitude: 22.969431,
+        longitude: 120.290273
+    }, {
+      type: 'text',
+      text: '林廷璋耳鼻喉科診所' + '\n' + ' 062309919'
+    }]
+     
     } else if (msg === '!尚介讚') {
-      nmsg = '尚介讚香鷄排' + '\n' + ' 062399882'
+      nmsg = [{
+        type: 'location',
+        title: '尚介讚香鷄排',
+        address: '711台南市歸仁區民族北街1號',
+        latitude: 22.971257,
+        longitude: 120.255953
+    }, {
+      type: 'text',
+      text: '尚介讚香鷄排' + '\n' + ' 062399882'
+    }]
+    
     } else if (msg === '!米里') {
       nmsg = '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
     } else if (msg === '!鮮茶道') {
@@ -180,7 +210,7 @@ bot.on('message', async (event) => {
         stickerId: '51626518'
       }
     } else {
-      nmsg = '請輸入 !指令'
+      nmsg = ''
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
