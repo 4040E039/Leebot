@@ -39,7 +39,6 @@ bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
   let nmsg = '';
-  let locationData = '';
   const data = await rp({
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
@@ -117,16 +116,22 @@ bot.on('message', async (event) => {
       nmsg = '我也愛你'
     } 
     else if (msg === '!鮮自然') {
-      locationData = {
-        type: 'location',
-        title: '鮮自然 (歸仁中山門市)',
-        address: '711台南市歸仁區中山路一段466號',
-        latitude: 22.967422,
-        longitude: 120.297990
-      }
-      nmsg = locationData 
-      event.reply('062396777')
-      event.reply(nmsg)
+      nmsg = '鮮自然 (歸仁中山門市)'+'\n'+' 062396777'
+    }
+    else if (msg === '!迷客夏') {
+      nmsg = '迷客夏 (臺南歸仁店)'+'\n'+' 062306878'
+    }
+    else if (msg === '!林廷璋') {
+      nmsg = '林廷璋耳鼻喉科診所'+'\n'+' 062309919'
+    }
+    else if (msg === '!尚介讚') {
+      nmsg = '尚介讚香鷄排'+'\n'+' 062399882'
+    }
+    else if (msg === '!米里') {
+      nmsg = '米里米里(歸仁中正南店)'+'\n'+' 062305959'
+    }
+    else if (msg === '!胖老爹') {
+      nmsg = '胖老爹美式炸雞(台南歸仁店)'+'\n'+' 062305279'
     }
     else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
