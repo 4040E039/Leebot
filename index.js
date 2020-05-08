@@ -68,7 +68,7 @@ bot.on('message', async (event) => {
       }
       nmsg = msgdata
     } else if (msg === '!美金' || msg === '!美元' || msg === '!美圓') {
-      nmsg = Arr[1]
+      nmsg = Arr[0]
     } else if (msg === '!港幣') {
       nmsg = Arr[1]
     } else if (msg === '!英鎊') {
