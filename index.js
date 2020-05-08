@@ -46,13 +46,7 @@ bot.on('message', async (event) => {
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
   })
-  let Arr = []
-  for(let j = 0; j<18;j++){
-    Arr += Arr.push(data[i].Bankcashbuy)
-  }
-  let Arr2 = ['美金: '+ Arr[0],'港幣: '+Arr[1],'英鎊: '+Arr[2],'澳幣: '+Arr[3],'加拿大幣: '+Arr[4],'新加坡幣: '+Arr[5],'法郎: '+Arr[6],'日圓: '+Arr[7],'南非幣: '+Arr[8],'瑞典幣: '+Arr[9],'紐元: '+Arr[10],'泰幣: '+Arr[11],'菲國比索: '+Arr[12],'印尼幣: '+Arr[13],'歐元: '+Arr[14],'韓元: '+Arr[15],'越南盾: '+Arr[16],'馬來幣: '+Arr[17],'人民幣: '+Arr[18]]
-
-  // let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
+  let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
   try {
     if (msg === '!你有啥用' || msg === '!簡介' || msg === '!功能' || msg === '!指令') {
       nmsg = '你可以輸入!匯率或!相對應貨幣'
@@ -63,7 +57,7 @@ bot.on('message', async (event) => {
       nmsg = msgdata
     } else if (msg === '!美金' || msg === '!美元' || msg === '!美圓') {
       msgdata = data[0].Bankcashbuy
-      nmsg = Arr2[0]
+      nmsg = '美金: ' + msgdata
     } else if (msg === '!港幣') {
       msgdata = data[1].Bankcashbuy
       nmsg = '港幣: ' + msgdata
