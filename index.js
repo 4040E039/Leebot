@@ -50,11 +50,8 @@ bot.on('message', async (event) => {
   for(let j = 0; j<18;j++){
     Arr += Arr.push(data[i].Bankcashbuy)
   }
-  let Arr2 = ['美金: ','港幣: ','英鎊: ','澳幣: ','加拿大幣: ','新加坡幣: ','法郎: ','日圓: ','南非幣: ','瑞典幣: ','紐元: ','泰幣: ','菲國比索: ','印尼幣: ','歐元: ','韓元: ','越南盾: ','馬來幣: ','人民幣: ']
-    Arr3 = []
-  for(let j = 0; j<18;j++) {
-    Arr3 +=  Arr2[i] + Arr[i]
-  }
+  let Arr2 = ['美金: '+Arr[0],'港幣: '+Arr[1],'英鎊: '+Arr[2],'澳幣: '+Arr[3],'加拿大幣: '+Arr[4],'新加坡幣: '+Arr[5],'法郎: '+Arr[6],'日圓: '+Arr[7],'南非幣: '+Arr[8],'瑞典幣: '+Arr[9],'紐元: '+Arr[10],'泰幣: '+Arr[11],'菲國比索: '+Arr[12],'印尼幣: '+Arr[13],'歐元: '+Arr[14],'韓元: '+Arr[15],'越南盾: '+Arr[16],'馬來幣: '+Arr[17],'人民幣: '+Arr[18]]
+ 
   // let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
  
   try {
@@ -62,12 +59,12 @@ bot.on('message', async (event) => {
       nmsg = '你可以輸入!匯率或!相對應貨幣'
     } else if (msg === '!匯率') {
       for (let i = 0; i < Arr.length; i++) {
-        msgdata += Arr3[i] + '\n'
+        msgdata += Arr2[i] + '\n'
       }
       nmsg = msgdata
     } else if (msg === '!美金') {
       msgdata = data[0].Bankcashbuy
-      nmsg = Arr3[0]
+      nmsg = Arr2[0]
     } 
     else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi') {
       nmsg = msg
