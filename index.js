@@ -124,7 +124,7 @@ bot.on('message', async (event) => {
         latitude: 22.967422,
         longitude: 120.297990
       }
-      nmsg = locationData
+      nmsg = locationData + '\n' + '062396777' 
     }
     else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
