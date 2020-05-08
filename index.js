@@ -45,10 +45,9 @@ bot.on('message', async (event) => {
   })
   let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
   try {
-    if (msg === '!你有啥用' || msg === '!簡介'|| msg === '!功能' || msg === '!指令') {
+    if (msg === '!你有啥用' || msg === '!簡介' || msg === '!功能' || msg === '!指令') {
       nmsg = '你可以輸入!匯率或!相對應貨幣'
-    }
-    else if (msg === '!匯率') {
+    } else if (msg === '!匯率') {
       for (let i = 0; i < Arr.length; i++) {
         msgdata += Arr[i] + '\n'
       }
@@ -114,26 +113,19 @@ bot.on('message', async (event) => {
       nmsg = msg
     } else if (msg === '!愛你' || msg === '!我愛你') {
       nmsg = '我也愛你'
-    } 
-    else if (msg === '!鮮自然') {
-      nmsg = '鮮自然 (歸仁中山門市)'+'\n'+' 062396777'
-    }
-    else if (msg === '!迷客夏') {
-      nmsg = '迷客夏 (臺南歸仁店)'+'\n'+' 062306878'
-    }
-    else if (msg === '!林廷璋') {
-      nmsg = '林廷璋耳鼻喉科診所'+'\n'+' 062309919'
-    }
-    else if (msg === '!尚介讚') {
-      nmsg = '尚介讚香鷄排'+'\n'+' 062399882'
-    }
-    else if (msg === '!米里') {
-      nmsg = '米里米里(歸仁中正南店)'+'\n'+' 062305959'
-    }
-    else if (msg === '!胖老爹') {
-      nmsg = '胖老爹美式炸雞(台南歸仁店)'+'\n'+' 062305279'
-    }
-    else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
+    } else if (msg === '!鮮自然') {
+      nmsg = '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
+    } else if (msg === '!迷客夏') {
+      nmsg = '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
+    } else if (msg === '!林廷璋') {
+      nmsg = '林廷璋耳鼻喉科診所' + '\n' + ' 062309919'
+    } else if (msg === '!尚介讚') {
+      nmsg = '尚介讚香鷄排' + '\n' + ' 062399882'
+    } else if (msg === '!米里') {
+      nmsg = '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
+    } else if (msg === '!胖老爹') {
+      nmsg = '胖老爹美式炸雞(台南歸仁店)' + '\n' + ' 062305279'
+    } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
         type: 'sticker',
         packageId: '11537',
@@ -169,7 +161,7 @@ bot.on('message', async (event) => {
         packageId: '11538',
         stickerId: '51626518'
       }
-    }  else {
+    } else {
       nmsg = '請輸入 !指令'
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
