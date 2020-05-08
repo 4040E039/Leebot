@@ -46,16 +46,16 @@ bot.on('message', async (event) => {
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
   })
-  let Arr2 = [];
-  for(let i = 0 ;i<19;i++){
-    Arr2.push(data[i].Bankcashbuy)
+  let Arr3 = [];
+  for(let i = 0 ;i < 19;i++){
+    Arr3.push(data[i].Bankcashbuy)
   }
 
-  let Arr = ['美金: ' , '港幣: ' , '英鎊: ' , '澳幣: ' , '加拿大幣: ' , '新加坡幣: ' , '法郎: ' , '日圓: ' , '南非幣: ' , '瑞典幣: ' , '紐元: ' , '泰幣: ' , '菲國比索: ' , '印尼幣: ' , '歐元: ' , '韓元: ' , '越南盾: ' , '馬來幣: ' , '人民幣: ' ]
+  let Arr2 = ['美金: ' , '港幣: ' , '英鎊: ' , '澳幣: ' , '加拿大幣: ' , '新加坡幣: ' , '法郎: ' , '日圓: ' , '南非幣: ' , '瑞典幣: ' , '紐元: ' , '泰幣: ' , '菲國比索: ' , '印尼幣: ' , '歐元: ' , '韓元: ' , '越南盾: ' , '馬來幣: ' , '人民幣: ' ]
 
-  let Arr3 = []
-  for(let i = 0 ;i<19;i++){
-    Arr3[i] = Arr[i] + Arr2[i]
+  let Arr = []
+  for(let i = 0 ;i<Arr2.length;i++){
+    Arr[i] = Arr2[i] + Arr3[i]
   }
   
 
@@ -68,7 +68,7 @@ bot.on('message', async (event) => {
       }
       nmsg = msgdata
     } else if (msg === '!美金' || msg === '!美元' || msg === '!美圓') {
-      nmsg = Arr3[0]
+      nmsg = Arr[1]
     } else if (msg === '!港幣') {
       nmsg = Arr[1]
     } else if (msg === '!英鎊') {
