@@ -115,6 +115,7 @@ bot.on('message', async (event) => {
       nmsg = '我也愛你'
     } 
     if (msg === '!訂餐'){
+      msg = ''
      if (msg === '!鮮自然') {
       nmsg = '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
     } else if (msg === '!迷客夏') {
