@@ -29,8 +29,11 @@ bot.on('join', async (event) => {
 })
 bot.on('leave', async (event) => {
   try {
-    event.reply('我滾啦')
-  } catch (error) {
+    nmsg ='我滾啦'
+    event.reply(nmsg)
+  }
+  
+   catch (error) {
     msg = '發生錯誤'
   }
 })
@@ -114,7 +117,16 @@ bot.on('message', async (event) => {
     } else if (msg === '!愛你' || msg === '!我愛你') {
       nmsg = '我也愛你'
     } else if (msg === '!鮮自然') {
-      nmsg = '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
+        nmsg = [{
+          type: 'location',
+          title: '鮮自然 (歸仁中山門市)',
+          address: '711台南市歸仁區中山路一段466號',
+          latitude: 22.967984,
+          longitude: 120.297512
+      }, {
+        type: 'text',
+        text: '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
+      }]
     } else if (msg === '!迷客夏') {
       nmsg = '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
     } else if (msg === '!林廷璋') {
@@ -168,7 +180,7 @@ bot.on('message', async (event) => {
         stickerId: '51626518'
       }
     } else {
-      nmsg = ''
+      nmsg = '請輸入 !指令'
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
