@@ -38,20 +38,21 @@ bot.on('leave', async (event) => {
   }
 })
 
-function test(nmsg){
-  nmsg = [{
-    type: 'location',
-    title: '尚介讚香鷄排',
-    address: '711台南市歸仁區民族北街1號',
-    latitude: 22.971257,
-    longitude: 120.255953
-}, {
-  type: 'text',
-  text: '尚介讚香鷄排' + '\n' + ' 062399882'
-}]
-}
+
 
 bot.on('message', async (event) => {
+  function test(nmsg){
+    nmsg = [{
+      type: 'location',
+      title: '尚介讚香鷄排',
+      address: '711台南市歸仁區民族北街1號',
+      latitude: 22.971257,
+      longitude: 120.255953
+  }, {
+    type: 'text',
+    text: '尚介讚香鷄排' + '\n' + ' 062399882'
+  }]
+  }
   let msg = event.message.text;
   let msgdata = '';
   let nmsg = '';
