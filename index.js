@@ -126,6 +126,7 @@ bot.on('message', async (event) => {
       }
       nmsg = locationData 
       event.reply('062396777')
+      event.reply(nmsg)
     }
     else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
