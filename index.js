@@ -116,8 +116,16 @@ bot.on('message', async (event) => {
       nmsg = '我也愛你'
     } 
     else if (msg === '!鮮自然') {
-      nmsg = '鮮自然(歸仁中山門市)\n062396777'
-    }else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
+      msgdata = {
+        type: 'location',
+        title: '鮮自然 (歸仁中山門市)',
+        address: '711台南市歸仁區中山路一段466號',
+        latitude: 22.967422,
+        longitude: 120.297990
+      }
+      nmsg = '062396777'+ '\n' + msgdata
+    }
+    else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
         type: 'sticker',
         packageId: '11537',
