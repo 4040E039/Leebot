@@ -46,7 +46,17 @@ bot.on('message', async (event) => {
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
   })
-  let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
+  let Arr = []
+  for(let j = 0; j<18;j++){
+    Arr += Arr.push(data[i].Bankcashbuy)
+  }
+  let Arr2 = ['美金: ','港幣: ','英鎊: ','澳幣: ','加拿大幣: ','新加坡幣: ','法郎: ','日圓: ','南非幣: ','瑞典幣: ','紐元: ','泰幣: ','菲國比索: ','印尼幣: ','歐元: ','韓元: ','越南盾: ','馬來幣: ','人民幣: ']
+    Arr3 = []
+  for(let j = 0; j<18;j++) {
+    Arr3[i] =  Arr2[i] + Arr[i]
+  }
+  // let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
+ 
   try {
     if (msg === '!你有啥用' || msg === '!簡介' || msg === '!功能' || msg === '!指令') {
       nmsg = '你可以輸入!匯率或!相對應貨幣'
@@ -55,64 +65,11 @@ bot.on('message', async (event) => {
         msgdata += Arr[i] + '\n'
       }
       nmsg = msgdata
-    } else if (msg === '!美金' || msg === '!美元' || msg === '!美圓') {
+    } else if (msg === '!美金') {
       msgdata = data[0].Bankcashbuy
-      nmsg = '美金: ' + msgdata
-    } else if (msg === '!港幣') {
-      msgdata = data[1].Bankcashbuy
-      nmsg = '港幣: ' + msgdata
-    } else if (msg === '!英鎊') {
-      msgdata = data[2].Bankcashbuy
-      nmsg = '英鎊: ' + msgdata
-    } else if (msg === '!澳幣') {
-      msgdata = data[3].Bankcashbuy
-      nmsg = '澳幣: ' + msgdata
-    } else if (msg === '!加拿大幣') {
-      msgdata = data[4].Bankcashbuy
-      nmsg = '加拿大幣: ' + msgdata
-    } else if (msg === '!新加坡幣') {
-      msgdata = data[5].Bankcashbuy
-      nmsg = '新加坡幣:' + msgdata
-    } else if (msg === '!法郎' || msg === '!瑞士法郎') {
-      msgdata = data[6].Bankcashbuy
-      nmsg = '法郎: ' + msgdata
-    } else if (msg === '!日圓') {
-      msgdata = data[7].Bankcashbuy
-      nmsg = '日圓: ' + msgdata
-    } else if (msg === '!南非幣') {
-      msgdata = data[8].Bankcashbuy
-      nmsg = '南非幣: ' + msgdata
-    } else if (msg === '!瑞典幣') {
-      msgdata = data[9].Bankcashbuy
-      nmsg = '瑞典幣: ' + msgdata
-    } else if (msg === '!紐元') {
-      msgdata = data[10].Bankcashbuy
-      nmsg = '紐元: ' + msgdata
-    } else if (msg === '!泰幣') {
-      msgdata = data[11].Bankcashbuy
-      nmsg = '泰幣: ' + msgdata
-    } else if (msg === '!菲國比索') {
-      msgdata = data[12].Bankcashbuy
-      nmsg = '菲國比索: ' + msgdata
-    } else if (msg === '!印尼幣') {
-      msgdata = data[13].Bankcashbuy
-      nmsg = '印尼幣: ' + msgdata
-    } else if (msg === '!歐元') {
-      msgdata = data[14].Bankcashbuy
-      nmsg = '歐元: ' + msgdata
-    } else if (msg === '!韓元') {
-      msgdata = data[15].Bankcashbuy
-      nmsg = '韓元: ' + msgdata
-    } else if (msg === '!越南盾') {
-      msgdata = data[16].Bankcashbuy
-      nmsg = '越南盾: ' + msgdata
-    } else if (msg === '!馬來幣') {
-      msgdata = data[17].Bankcashbuy
-      nmsg = '馬來幣: ' + msgdata
-    } else if (msg === '!人民幣') {
-      msgdata = data[18].Bankcashbuy
-      nmsg = '人民幣: ' + msgdata
-    } else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi') {
+      nmsg = Arr3[0]
+    } 
+    else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi') {
       nmsg = msg
     } else if (msg === '!愛你' || msg === '!我愛你') {
       nmsg = '我也愛你'
