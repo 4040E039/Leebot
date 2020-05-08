@@ -113,7 +113,9 @@ bot.on('message', async (event) => {
       nmsg = msg
     } else if (msg === '!愛你' || msg === '!我愛你') {
       nmsg = '我也愛你'
-    } else if (msg === '!鮮自然') {
+    } 
+    if (msg === '!訂餐'){
+     if (msg === '!鮮自然') {
       nmsg = '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
     } else if (msg === '!迷客夏') {
       nmsg = '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
@@ -131,7 +133,9 @@ bot.on('message', async (event) => {
       nmsg = '三姐妹海苔飯捲複合式餐飲' + '\n' + ' 063300168'
     } else if (msg === '!佳美') {
       nmsg = '佳美味-蔥爆豬肉飯' + '\n' + ' 063306970'
-    } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
+    }
+    } 
+    else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
         type: 'sticker',
         packageId: '11537',
