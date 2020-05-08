@@ -46,9 +46,9 @@ bot.on('message', async (event) => {
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
   })
-  let Arr2 = []
+  let Arr2 = [];
   for(let i = 0 ;i<19;i++){
-    Arr2 += Arr2.push(data[i].Bankcashbuy)
+    Arr2.push(data[i].Bankcashbuy)
   }
 
   let Arr = ['美金: ' + Arr2[0], '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
