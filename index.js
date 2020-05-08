@@ -53,7 +53,7 @@ bot.on('message', async (event) => {
   let Arr2 = ['美金: ','港幣: ','英鎊: ','澳幣: ','加拿大幣: ','新加坡幣: ','法郎: ','日圓: ','南非幣: ','瑞典幣: ','紐元: ','泰幣: ','菲國比索: ','印尼幣: ','歐元: ','韓元: ','越南盾: ','馬來幣: ','人民幣: ']
     Arr3 = []
   for(let j = 0; j<18;j++) {
-    Arr3[i] =  Arr2[i] + Arr[i]
+    Arr3 +=  Arr2[i] + Arr[i]
   }
   // let Arr = ['美金: ' + data[0].Bankcashbuy, '港幣: ' + data[1].Bankcashbuy, '英鎊: ' + data[2].Bankcashbuy, '澳幣: ' + data[3].Bankcashbuy, '加拿大幣: ' + data[4].Bankcashbuy, '新加坡幣: ' + data[5].Bankcashbuy, '法郎: ' + data[6].Bankcashbuy, '日圓: ' + data[7].Bankcashbuy, '南非幣: ' + data[8].Bankcashbuy, '瑞典幣: ' + data[9].Bankcashbuy, '紐元: ' + data[10].Bankcashbuy, '泰幣: ' + data[11].Bankcashbuy, '菲國比索: ' + data[12].Bankcashbuy, '印尼幣: ' + data[13].Bankcashbuy, '歐元: ' + data[14].Bankcashbuy, '韓元: ' + data[15].Bankcashbuy, '越南盾: ' + data[16].Bankcashbuy, '馬來幣: ' + data[17].Bankcashbuy, '人民幣: ' + data[18].Bankcashbuy]
  
