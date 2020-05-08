@@ -3,7 +3,7 @@ import cheerio from 'cheerio'
 import fs from 'fs'
 const earthquake = function () {
   request({
-    url: "https://rate.bot.com.tw/xrt?Lang=zh-TW", // 中央氣象局網頁
+    url: "https://rate.bot.com.tw/xrt?Lang=zh-TW",
     method: "GET"
   }, function (error, response, body) {
     if (error || !body) {
