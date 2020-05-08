@@ -56,62 +56,43 @@ bot.on('message', async (event) => {
       }
       nmsg = msgdata
     } else if (msg === '!美金' || msg === '!美元' || msg === '!美圓') {
-      msgdata = Arr[0]
-      nmsg = '美金: ' + msgdata
+      nmsg = Arr[0]
     } else if (msg === '!港幣') {
-      msgdata = Arr[1]
-      nmsg = '港幣: ' + msgdata
+      nmsg = Arr[1]
     } else if (msg === '!英鎊') {
-      msgdata = Arr[2]
-      nmsg = '英鎊: ' + msgdata
+      nmsg = Arr[2]
     } else if (msg === '!澳幣') {
-      msgdata = Arr[3]
-      nmsg = '澳幣: ' + msgdata
+      nmsg = Arr[3]
     } else if (msg === '!加拿大幣') {
-      msgdata = Arr[4]
-      nmsg = '加拿大幣: ' + msgdata
+      nmsg = Arr[4]
     } else if (msg === '!新加坡幣') {
-      msgdata =Arr[5]
-      nmsg = '新加坡幣:' + msgdata
+      nmsg = Arr[5]
     } else if (msg === '!法郎' || msg === '!瑞士法郎') {
-      msgdata =Arr[6]
-      nmsg = '法郎: ' + msgdata
+      nmsg = Arr[6]
     } else if (msg === '!日圓') {
-      msgdata = Arr[7]
-      nmsg = '日圓: ' + msgdata
+      nmsg = Arr[7]
     } else if (msg === '!南非幣') {
-      msgdata = Arr[8]
-      nmsg = '南非幣: ' + msgdata
+      nmsg = Arr[8]
     } else if (msg === '!瑞典幣') {
-      msgdata = Arr[9]
-      nmsg = '瑞典幣: ' + msgdata
+      nmsg = Arr[9]
     } else if (msg === '!紐元') {
-      msgdata = Arr[10]
-      nmsg = '紐元: ' + msgdata
+      nmsg = Arr[10]
     } else if (msg === '!泰幣') {
-      msgdata = Arr[11]
-      nmsg = '泰幣: ' + msgdata
+      nmsg = Arr[11]
     } else if (msg === '!菲國比索') {
-      msgdata = Arr[12]
-      nmsg = '菲國比索: ' + msgdata
+      nmsg = Arr[12]
     } else if (msg === '!印尼幣') {
-      msgdata = Arr[13]
-      nmsg = '印尼幣: ' + msgdata
+      nmsg = Arr[13]
     } else if (msg === '!歐元') {
-      msgdata = Arr[14]
-      nmsg = '歐元: ' + msgdata
+      nmsg = Arr[14]
     } else if (msg === '!韓元') {
-      msgdata =Arr[15]
-      nmsg = '韓元: ' + msgdata
+      nmsg = Arr[15]
     } else if (msg === '!越南盾') {
-      msgdata = Arr[16]
-      nmsg = '越南盾: ' + msgdata
+      nmsg = Arr[16]
     } else if (msg === '!馬來幣') {
-      msgdata = Arr[17]
-      nmsg = '馬來幣: ' + msgdata
+      nmsg = Arr[17]
     } else if (msg === '!人民幣') {
-      msgdata = Arr[18]
-      nmsg = '人民幣: ' + msgdata
+      nmsg = Arr[18]
     } else if (msg === '!你好' || msg === '!Hello' || msg === '!Hi') {
       nmsg = msg
     } else if (msg === '!愛你' || msg === '!我愛你') {
