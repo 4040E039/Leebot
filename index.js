@@ -168,7 +168,7 @@ bot.on('message', async (event) => {
         stickerId: '51626518'
       }
     } else {
-      nmsg = '請輸入 !指令'
+      nmsg = ''
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
