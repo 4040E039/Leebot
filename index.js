@@ -206,7 +206,7 @@ bot.on('message', async (event) => {
       }]
 
     } else if (msg === '!胖老爹') {
-      [{
+      nmsg = [{
         type: 'image',
         originalContentUrl: 'https://4040e039.github.io/image/Fatdad.jpg',
         previewImageUrl: 'https://4040e039.github.io/image/Fatdad.jpg'
