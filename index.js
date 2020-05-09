@@ -165,6 +165,10 @@ bot.on('message', async (event) => {
         latitude: 22.967261,
         longitude: 120.292246
       }, {
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/ShangJiezan.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/ShangJiezan.jpg'
+      }, {
         type: 'text',
         text: '尚介讚香鷄排' + '\n' + ' 062399882'
       }]
@@ -176,6 +180,10 @@ bot.on('message', async (event) => {
         address: '711台南市歸仁區中正南路一段89號',
         latitude: 22.964456,
         longitude: 120.293528
+      }, {
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/mimi.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/mimi.jpg'
       }, {
         type: 'text',
         text: '米里米里(歸仁中正南店)' + '\n' + ' 062305959'
@@ -198,7 +206,15 @@ bot.on('message', async (event) => {
       }]
 
     } else if (msg === '!胖老爹') {
-      nmsg = '胖老爹美式炸雞(台南歸仁店)' + '\n' + ' 062305279'
+      [{
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/Fatdad.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/Fatdad.jpg'
+      }, {
+        type: 'text',
+        text: '胖老爹美式炸雞(台南歸仁店)' + '\n' + ' 062305279'
+      }]
+
     } else if (msg === '!三姐妹') {
       nmsg = '三姐妹海苔飯捲複合式餐飲' + '\n' + ' 063300168'
     } else if (msg === '!佳美') {
@@ -214,7 +230,7 @@ bot.on('message', async (event) => {
         type: 'text',
         text: '元之氣(歸仁中山店)' + '\n' + ' 062308846'
       }]
- 
+
     } else if (msg === '!哇哈哈') {
       nmsg = [{
         type: 'image',
