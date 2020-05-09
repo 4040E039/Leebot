@@ -240,7 +240,7 @@ bot.on('message', async (event) => {
     // msg = data.entry[0].title
     let reg = RegExp(/！/);
     if(nmsg.match(reg)){
-      String.fromCharCode(str.charCodeAt('！')-12256);
+      String.fromCharCode(nmsg.charCodeAt('！')-12256);
       event.reply(nmsg)
     }else{
       event.reply(nmsg)
