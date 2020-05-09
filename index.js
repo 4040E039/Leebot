@@ -129,7 +129,7 @@ bot.on('message', async (event) => {
         type: 'text',
         text: '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
       }]
-    } else if (msg === '!迷客夏') {
+    } else if (msg === '!迷客夏' || msg === '!迷克夏') {
       nmsg = [{
         type: 'location',
         title: '迷客夏 (臺南歸仁店)',
@@ -214,8 +214,48 @@ bot.on('message', async (event) => {
         type: 'text',
         text: '胖老爹美式炸雞(台南歸仁店)' + '\n' + ' 062305279'
       }]
-
-    } else if (msg === '!三姐妹') {
+      } 
+      else if (msg === '!美芝城' || msg === '!美之城') {
+        nmsg = [{
+          type: 'image',
+          originalContentUrl: 'https://4040e039.github.io/image/BeachCity.jpg',
+          previewImageUrl: 'https://4040e039.github.io/image/BeachCity.jpg'
+        }, {
+          type: 'text',
+          text: '早安!美芝城(台南歸仁店)' + '\n' + ' 062301610'
+        }]
+      }
+      else if (msg === '!鮮果漾' || msg === '!鮮果樣') {
+        nmsg = [{
+          type: 'image',
+          originalContentUrl: 'https://4040e039.github.io/image/Fresfruit.jpg',
+          previewImageUrl: 'https://4040e039.github.io/image/BFreshfruit.jpg'
+        }, {
+          type: 'text',
+          text: '鮮果漾(台南歸仁店)' + '\n' + ' 062306393'
+        }]
+      }
+      else if (msg === '!一手私藏' || msg === '!一手') {
+        nmsg = [{
+          type: 'image',
+          originalContentUrl: 'https://4040e039.github.io/image/Privatetea.jpg',
+          previewImageUrl: 'https://4040e039.github.io/image/Privatetea.jpg'
+        }, {
+          type: 'text',
+          text: '一手私藏世界紅茶(歸仁市場店)' + '\n' + ' 062303798'
+        }]
+      }
+      else if (msg === '!達美樂') {
+        nmsg = [{
+          type: 'image',
+          originalContentUrl: 'https://4040e039.github.io/image/Domino.jpg',
+          previewImageUrl: 'https://4040e039.github.io/image/Domino.jpg'
+        }, {
+          type: 'text',
+          text: '達美樂披薩(歸仁中山店)' + '\n' + ' 062305252'
+        }]
+      }
+      else if (msg === '!三姐妹') {
       nmsg = [{
         type: 'image',
         originalContentUrl: 'https://4040e039.github.io/image/Threesisters.jpg',
