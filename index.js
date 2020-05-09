@@ -40,8 +40,6 @@ bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
   let nmsg = '';
-  
-  String.fromCharCode(str.charCodeAt('！')-12256);
   const data = await rp({
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
@@ -60,8 +58,6 @@ bot.on('message', async (event) => {
     Arr[i] = Arr3[i] + Arr2[i]
   }
 
-    
-   
 
   try {
     if (msg === '!你有啥用' || msg === '!簡介' || msg === '!功能' || msg === '!指令') {
@@ -192,15 +188,7 @@ bot.on('message', async (event) => {
       nmsg = '佳美味-蔥爆豬肉飯' + '\n' + ' 063306970'
     } else if (msg === '!天吉屋') {
       nmsg = '天吉屋' + '\n' + ' 062396044'
-    } else if (msg === '!元之氣') {
-      nmsg = '元之氣(歸仁中山店)' + '\n' + ' 062308846'
-    } else if (msg === '!紅太陽') {
-      nmsg = '紅太陽(歸仁中山店)' + '\n' + ' 062303456'
-    } 
-      else if (msg === '!小南便當') {
-      nmsg = '小南雞腿排骨大王(歸仁店)' + '\n' + ' 063302418'
-    } 
-    else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
+    } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
         type: 'sticker',
         packageId: '11537',
