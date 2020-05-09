@@ -239,7 +239,11 @@ bot.on('message', async (event) => {
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
-    event.reply(nmsg)
+    if(nmsg.indexOf("！")=0){
+      nmsg = nmsg.replace('！', '!')
+      event.reply(nmsg)
+    }else{event.reply(nmsg)}
+    
   } catch (error) {
     msg = '發生錯誤'
   }
