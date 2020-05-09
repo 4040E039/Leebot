@@ -233,7 +233,7 @@ bot.on('message', async (event) => {
         type: 'text',
         text: '紅太陽(歸仁中山店)' + '\n' + ' 062303456'
       }]
-    } else if (msg === '!小南便當') {
+    } else if (msg === '!小南便當' || msg === '!小南') {
       nmsg = '小南雞腿排骨大王(歸仁店)' + '\n' + ' 063302418'
     } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
