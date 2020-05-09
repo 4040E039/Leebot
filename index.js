@@ -236,7 +236,7 @@ bot.on('message', async (event) => {
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
     if(msg.indexOf('！') === 0){
-      nmsg.replace('！', '!')
+      msg = msg.replace('！', '!')
       event.reply(nmsg)
     }else{
       event.reply(nmsg)
