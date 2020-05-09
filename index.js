@@ -38,9 +38,9 @@ bot.on('leave', async (event) => {
 
 bot.on('message', async (event) => {
   let msg = event.message.text;
-  if(msg.indexOf('！') === 0){
+  if (msg.indexOf('！') === 0) {
     msg = msg.replace('！', '!')
-  }else{
+  } else {
     msg = event.message.text
   }
   let msgdata = '';
@@ -122,6 +122,10 @@ bot.on('message', async (event) => {
         latitude: 22.966542,
         longitude: 120.297670
       }, {
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/natural.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/natural.jpg'
+      }, {
         type: 'text',
         text: '鮮自然 (歸仁中山門市)' + '\n' + ' 062396777'
       }]
@@ -132,6 +136,10 @@ bot.on('message', async (event) => {
         address: '71142台南市歸仁區中山路一段464號',
         latitude: 22.966466,
         longitude: 120.297862
+      }, {
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/mikeshop.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/mikeshop.jpg'
       }, {
         type: 'text',
         text: '迷客夏 (臺南歸仁店)' + '\n' + ' 062306878'
@@ -181,6 +189,10 @@ bot.on('message', async (event) => {
         latitude: 22.966612,
         longitude: 120.293827
       }, {
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/Freshtea.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/Freshtea.jpg'
+      }, {
         type: 'text',
         text: '鮮茶道 (歸仁圓環店)' + '\n' + ' 063387933'
       }]
@@ -194,7 +206,24 @@ bot.on('message', async (event) => {
     } else if (msg === '!天吉屋') {
       nmsg = '天吉屋' + '\n' + ' 062396044'
     } else if (msg === '!元之氣') {
-      nmsg = '元之氣(歸仁中山店)' + '\n' + ' 062308846'
+      nmsg = [{
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/YuanZhiqi.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/YuanZhiqi.jpg'
+      }, {
+        type: 'text',
+        text: '元之氣(歸仁中山店)' + '\n' + ' 062308846'
+      }]
+ 
+    } else if (msg === '!哇哈哈') {
+      nmsg = [{
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/haha.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/haha.jpg'
+      }, {
+        type: 'text',
+        text: '哈哈鍋特色臭臭鍋' + '\n' + ' 063386675'
+      }]
     } else if (msg === '!紅太陽') {
       nmsg = [{
         type: 'image',
@@ -204,8 +233,7 @@ bot.on('message', async (event) => {
         type: 'text',
         text: '紅太陽(歸仁中山店)' + '\n' + ' 062303456'
       }]
-    } 
-    else if (msg === '!小南便當') {
+    } else if (msg === '!小南便當') {
       nmsg = '小南雞腿排骨大王(歸仁店)' + '\n' + ' 063302418'
     } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
@@ -249,10 +277,10 @@ bot.on('message', async (event) => {
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
 
-      event.reply(nmsg)
-    
-    
-    
+    event.reply(nmsg)
+
+
+
   } catch (error) {
     msg = '發生錯誤'
   }
