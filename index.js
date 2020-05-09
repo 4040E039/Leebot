@@ -38,6 +38,11 @@ bot.on('leave', async (event) => {
 
 bot.on('message', async (event) => {
   let msg = event.message.text;
+  if(msg.indexOf('！') === 0){
+    msg = msg.replace('！', '!')
+  }else{
+    msg = event.message.text
+  }
   let msgdata = '';
   let nmsg = '';
   const data = await rp({
@@ -235,12 +240,9 @@ bot.on('message', async (event) => {
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
-    if(msg.indexOf('！') === 0){
-      msg = msg.replace('！', '!')
+
       event.reply(nmsg)
-    }else{
-      event.reply(nmsg)
-    }
+    
     
     
   } catch (error) {
