@@ -216,8 +216,37 @@ bot.on('message', async (event) => {
       }]
 
     } else if (msg === '!三姐妹') {
-      nmsg = '三姐妹海苔飯捲複合式餐飲' + '\n' + ' 063300168'
-    } else if (msg === '!佳美') {
+      nmsg = [{
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/Threesisters.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/Threesisters.jpg'
+      }, {
+        type: 'text',
+        text: '三姐妹海苔飯捲複合式餐飲' + '\n' + ' 063300168'
+      }]
+     
+    } else if (msg === '!BB特餐富農店') {
+      nmsg = 'BB特餐(富農分店)' + '\n' + ' 062891827'
+    } else if (msg === '!谷軒') {
+      nmsg = [{
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/GuXuan.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/GuXuan.jpg'
+      }, {
+        type: 'text',
+        text: '谷軒快餐' + '\n' + ' 062393912'
+      }]
+    } else if (msg === '!園璞') {
+      nmsg = [{
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/Yuanpu.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/Yuanpu.jpg'
+      }, {
+        type: 'text',
+        text: '歸仁園璞炒飯鍋燒專賣店' + '\n' + ' 063308072'
+      }]
+    } 
+    else if (msg === '!佳美') {
       nmsg = '佳美味-蔥爆豬肉飯' + '\n' + ' 063306970'
     } else if (msg === '!天吉屋') {
       nmsg = '天吉屋' + '\n' + ' 062396044'
@@ -231,7 +260,17 @@ bot.on('message', async (event) => {
         text: '元之氣(歸仁中山店)' + '\n' + ' 062308846'
       }]
 
-    } else if (msg === '!哇哈哈') {
+    } else if (msg === '!老先覺') {
+      nmsg = [{
+        type: 'image',
+        originalContentUrl: 'https://4040e039.github.io/image/LaoXianjue.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/LaoXianjue.jpg'
+      }, {
+        type: 'text',
+        text: '老先覺歸仁店' + '\n' + ' 062308949'
+      }]
+
+    }else if (msg === '!哇哈哈') {
       nmsg = [{
         type: 'image',
         originalContentUrl: 'https://4040e039.github.io/image/haha.jpg',
