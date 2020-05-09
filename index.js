@@ -40,8 +40,8 @@ bot.on('message', async (event) => {
   let msg = event.message.text;
   let msgdata = '';
   let nmsg = '';
-
-  String.fromCharCode(str.charCodeAt('！') - 12256);
+  
+  String.fromCharCode(str.charCodeAt('！')-12256);
   const data = await rp({
     uri: 'https://4040e039.github.io/Leebot/result.json',
     json: true
@@ -60,8 +60,8 @@ bot.on('message', async (event) => {
     Arr[i] = Arr3[i] + Arr2[i]
   }
 
-
-
+    
+   
 
   try {
     if (msg === '!你有啥用' || msg === '!簡介' || msg === '!功能' || msg === '!指令') {
@@ -196,9 +196,11 @@ bot.on('message', async (event) => {
       nmsg = '元之氣(歸仁中山店)' + '\n' + ' 062308846'
     } else if (msg === '!紅太陽') {
       nmsg = '紅太陽(歸仁中山店)' + '\n' + ' 062303456'
-    } else if (msg === '!小南便當') {
+    } 
+      else if (msg === '!小南便當') {
       nmsg = '小南雞腿排骨大王(歸仁店)' + '\n' + ' 063302418'
-    } else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
+    } 
+    else if (msg === '!滾' || msg === '!閉嘴' || msg === '!B嘴') {
       nmsg = {
         type: 'sticker',
         packageId: '11537',
@@ -239,7 +241,6 @@ bot.on('message', async (event) => {
     }
     // const data = await rp({ uri: 'https://kktix.com/events.json', json: true })
     // msg = data.entry[0].title
-
     event.reply(nmsg)
   } catch (error) {
     msg = '發生錯誤'
