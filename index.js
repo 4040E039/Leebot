@@ -198,12 +198,8 @@ bot.on('message', async (event) => {
     } else if (msg === '!紅太陽') {
       nmsg = [{
         type: 'image',
-        originalContentUrl: 'https://4040e039.github.io/image/redsun1.jpg',
-        previewImageUrl: 'https://4040e039.github.io/image/redsun1.jpg'
-      },{
-        type: 'image',
-        originalContentUrl: 'https://4040e039.github.io/image/redsun2.jpg',
-        previewImageUrl: 'https://4040e039.github.io/image/redsun2.jpg'
+        originalContentUrl: 'https://4040e039.github.io/image/redsun.jpg',
+        previewImageUrl: 'https://4040e039.github.io/image/redsun.jpg'
       }, {
         type: 'text',
         text: '紅太陽(歸仁中山店)' + '\n' + ' 062303456'
