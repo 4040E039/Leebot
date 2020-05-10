@@ -55,7 +55,7 @@ bot.on('message', async (event) => {
 
   let Arr2 = [];
   for (let i = 0; i < Arr3.length; i++) {
-    Arr2.push(data[i].Bankcashbuy)
+    Arr2.push(data[i].Bankcashsold)
   }
 
   let Arr = []
