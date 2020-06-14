@@ -33,5 +33,3 @@ const earthquake = function () {
 };
 
 earthquake();
-// 每半小時爬一次資料
-setInterval(earthquake, 30 * 60 * 1000);
